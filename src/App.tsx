@@ -1,26 +1,109 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
 
-function App() {
+
+
+const App = () => {
+
+  const nom: string = 'John';
+  // const nom = { prenom: "sam", nom: "fournier" };
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Bienvenue nom={nom} />
     </div>
   );
 }
+
+type Argument = {
+  nom: string;
+}
+
+
+const Bienvenue = ({nom} : Argument) => {
+  return (
+    <div>
+      <h1>Bienvenue {nom}</h1>
+    </div>
+  );
+}
+
+
+
+/**
+ * *************************************************************
+ * *************************************************************
+ * *************************************************************
+ * *************************************************************
+ * *************************************************************
+ */
+
+
+// const App = () => {
+
+//   const moi = {
+//     prenom: "Samuel",
+//     nom: "Fournier",
+//     age: 24,
+//   };
+
+//   return (
+//     <div>
+//       <Bienvenue humain={moi} />
+//     </div>
+//   );
+// }
+
+
+// type Humain = {
+//   prenom: string;
+//   nom: string;
+//   age: number;
+// }
+
+// type Argument = {
+//   humain: Humain;
+// }
+
+// const Bienvenue = ({ humain }: Argument) => {
+//   return (
+//     <div>
+//       <h1>Bienvenue {humain.nom} {humain.prenom} vous avez { humain.age} ans</h1>
+//     </div>
+//   );
+// }
+
+
+
+
+/**
+ * *************************************************************
+ * *************************************************************
+ * *************************************************************
+ * *************************************************************
+ * *************************************************************
+ */
+
+
+// const App = () => {
+
+//   const nom = 'Samuel';
+//   // const nom = 'Sam';
+//   return (
+//     <div>
+//       <Bienvenue nom={nom} />
+//     </div>
+//   );
+// }
+
+// type Argument = {
+//   nom: "Samuel" | "John";
+// }
+
+
+// const Bienvenue = ({nom} : Argument) => {
+//   return (
+//     <div>
+//       <h1>Bienvenue {nom}</h1>
+//     </div>
+//   );
+// }
 
 export default App;
